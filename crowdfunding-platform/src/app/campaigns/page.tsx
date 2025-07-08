@@ -230,7 +230,7 @@ export default function CampaignsPage() {
   const [selectedLocation, setSelectedLocation] = useState("All Locations");
   const [sortBy, setSortBy] = useState("featured");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
-  const [showFilters] = useState(false);
+  // const [showFilters] = useState(false);
   const [priceRange, setPriceRange] = useState([0, 100000]);
   const [showVerifiedOnly, setShowVerifiedOnly] = useState(false);
 

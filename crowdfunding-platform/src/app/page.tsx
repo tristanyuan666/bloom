@@ -653,7 +653,7 @@ export default function Home() {
               {/* Testimonial Content */}
               <div className="text-center mb-8">
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                  "{TESTIMONIALS[currentTestimonial].quote}"
+                  &quot;{TESTIMONIALS[currentTestimonial].quote}&quot;
                 </p>
                 
                 {/* Rating */}
@@ -827,7 +827,7 @@ export default function Home() {
                 {/* Welcome Section */}
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">Welcome back, Sarah!</h2>
-                  <p className="text-gray-600">Here's how your campaigns are performing today.</p>
+                  <p className="text-gray-600">Here&apos;s how your campaigns are performing today.</p>
                 </div>
 
                 {/* Stats Grid */}

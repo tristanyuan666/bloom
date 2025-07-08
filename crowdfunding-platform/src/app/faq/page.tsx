@@ -313,7 +313,7 @@ export default function FAQPage() {
           <div className="mt-16 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-100 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Still Need Help?</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help you 24/7.
+              Can&apos;t find what you&apos;re looking for? Our support team is here to help you 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/support" className="btn-primary">
