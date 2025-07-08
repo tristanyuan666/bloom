@@ -335,7 +335,7 @@ export default function HowItWorksPage() {
             
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">What happens if I don't reach my funding goal?</CardTitle>
+                <CardTitle className="text-lg">What happens if I don&apos;t reach my funding goal?</CardTitle>
               </CardHeader>
               <CardContent>
                                    <p className="text-gray-600">

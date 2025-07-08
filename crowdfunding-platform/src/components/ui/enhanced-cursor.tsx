@@ -275,7 +275,7 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
       });
       document.addEventListener("visibilitychange", handleVisibilityChange);
       window.addEventListener("focus", handleFocus);
-    } catch (error) {
+    } catch {
       // Silently handle event listener errors
     }
 
@@ -304,7 +304,7 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
         if (typeof window !== "undefined") {
           window.removeEventListener("focus", handleFocus);
         }
-      } catch (error) {
+      } catch {
         // Silently handle cleanup errors
       }
     };
