@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, Filter, Grid3X3, List, MapPin, Clock, Users, DollarSign, TrendingUp, Heart, Share2, Eye, Star, ChevronDown, X, SlidersHorizontal } from 'lucide-react';
+import { Search, Grid3X3, List, MapPin, Clock, Users, TrendingUp, Heart, Share2, Star, ChevronDown } from 'lucide-react';
 
 // Mock data for campaigns
 const MOCK_CAMPAIGNS = [
@@ -223,14 +223,14 @@ const SORT_OPTIONS = [
 ];
 
 export default function CampaignsPage() {
-  const [campaigns, setCampaigns] = useState(MOCK_CAMPAIGNS);
+  const [campaigns] = useState(MOCK_CAMPAIGNS);
   const [filteredCampaigns, setFilteredCampaigns] = useState(MOCK_CAMPAIGNS);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedLocation, setSelectedLocation] = useState("All Locations");
   const [sortBy, setSortBy] = useState("featured");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters] = useState(false);
   const [priceRange, setPriceRange] = useState([0, 100000]);
   const [showVerifiedOnly, setShowVerifiedOnly] = useState(false);
 

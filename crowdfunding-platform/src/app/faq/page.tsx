@@ -19,11 +19,11 @@ const FAQ_CATEGORIES = [
       },
       {
         question: "Is Bloom available internationally?",
-        answer: "Currently, Bloom is available in the United States. We're working on expanding to other countries and will announce new regions as they become available."
+        answer: "Currently, Bloom is available in the United States. We&apos;re working on expanding to other countries and will announce new regions as they become available."
       },
       {
         question: "What types of businesses can use Bloom?",
-        answer: "Bloom supports a wide range of business types including restaurants, retail, technology, fashion, crafts, agriculture, education, and more. We're designed for small businesses, startups, and entrepreneurs across all industries."
+        answer: "Bloom supports a wide range of business types including restaurants, retail, technology, fashion, crafts, agriculture, education, and more. We&apos;re designed for small businesses, startups, and entrepreneurs across all industries."
       }
     ]
   },

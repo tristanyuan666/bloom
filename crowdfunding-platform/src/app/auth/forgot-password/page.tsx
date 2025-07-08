@@ -32,7 +32,7 @@ export default function ForgotPasswordPage() {
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubmitted(true);
-    } catch (error) {
+    } catch {
       setError('An error occurred. Please try again.');
     } finally {
       setIsLoading(false);
@@ -60,7 +60,7 @@ export default function ForgotPasswordPage() {
           <div className="bg-white py-8 px-4 shadow-sm border border-gray-200 sm:rounded-xl sm:px-10">
             <div className="text-center space-y-4">
               <p className="text-sm text-gray-600">
-                Didn't receive the email? Check your spam folder or try again.
+                Didn&apos;t receive the email? Check your spam folder or try again.
               </p>
               <button
                 onClick={() => {

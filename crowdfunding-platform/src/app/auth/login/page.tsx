@@ -40,7 +40,7 @@ export default function LoginPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       // Handle successful login
       console.log('Login successful:', formData);
-    } catch (error) {
+    } catch {
       setErrors({ general: 'Invalid email or password' });
     } finally {
       setIsLoading(false);

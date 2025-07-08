@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Clock, MapPin, Users, Share2, Heart, MessageCircle, Calendar, DollarSign } from 'lucide-react';
+import { MapPin, Users, Share2, Heart, MessageCircle, Calendar, DollarSign } from 'lucide-react';
 
 export default function CampaignDetailPage({ params }: { params: { id: string } }) {
   const [activeTab, setActiveTab] = useState<'about' | 'updates' | 'backers'>('about');
@@ -12,7 +12,7 @@ export default function CampaignDetailPage({ params }: { params: { id: string } 
     id: params.id,
     title: "Eco-Friendly Coffee Shop",
     description: "Opening a sustainable coffee shop that sources beans directly from local farmers and uses compostable packaging.",
-    longDescription: "We're passionate about creating a coffee shop that not only serves amazing coffee but also makes a positive impact on our community and the environment.",
+    longDescription: "We&apos;re passionate about creating a coffee shop that not only serves amazing coffee but also makes a positive impact on our community and the environment.",
     image: "/api/placeholder/800/400",
     category: "Food & Beverage",
     goal: 25000,
@@ -65,7 +65,7 @@ export default function CampaignDetailPage({ params }: { params: { id: string } 
       {
         id: 2,
         title: "Partnering with Local Farmers",
-        content: "We're excited to announce our partnership with three local coffee farms committed to sustainable practices.",
+        content: "We&apos;re excited to announce our partnership with three local coffee farms committed to sustainable practices.",
         date: "2024-11-10",
         author: "Sarah Johnson"
       }

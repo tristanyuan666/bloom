@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Github, Twitter, CheckCircle } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Github, Twitter } from 'lucide-react';
 
 export default function SignUpPage() {
   const [formData, setFormData] = useState({
@@ -67,7 +67,7 @@ export default function SignUpPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       // Handle successful signup
       console.log('Signup successful:', formData);
-    } catch (error) {
+    } catch {
       setErrors({ general: 'An error occurred during signup' });
     } finally {
       setIsLoading(false);

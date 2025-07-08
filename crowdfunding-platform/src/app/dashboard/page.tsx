@@ -8,7 +8,6 @@ import {
   Users, 
   TrendingUp, 
   Heart, 
-  Settings, 
   Plus, 
   BarChart3,
   MapPin,
@@ -176,14 +175,14 @@ export default function DashboardPage() {
             <div className="flex items-center space-x-4">
               <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               <div className="flex-1">
-                <p className="text-sm text-gray-900">Campaign "Smart Home Security Device" created</p>
+                <p className="text-sm text-gray-900">Campaign &quot;Smart Home Security Device&quot; created</p>
                 <p className="text-xs text-gray-500">1 day ago</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
               <div className="flex-1">
-                <p className="text-sm text-gray-900">Reward "Free Coffee for a Week" claimed</p>
+                <p className="text-sm text-gray-900">Reward &quot;Free Coffee for a Week&quot; claimed</p>
                 <p className="text-xs text-gray-500">3 days ago</p>
               </div>
             </div>

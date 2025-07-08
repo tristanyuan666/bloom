@@ -63,7 +63,7 @@ const HOW_IT_WORKS_STEPS = [
   {
     step: "04",
     title: "Launch Your Business",
-    description: "Receive your funds and start building your dream. We're here to support your journey every step of the way.",
+    description: "Receive your funds and start building your dream. We&apos;re here to support your journey every step of the way.",
     icon: Rocket,
     color: "orange"
   }
@@ -143,7 +143,7 @@ const TESTIMONIALS = [
     name: "Sarah Johnson",
     role: "Founder, Eco Coffee Co.",
     image: "/testimonials/sarah.jpg",
-    quote: "Bloom helped us raise $25,000 in just 30 days. The platform's tools and support made all the difference in bringing our sustainable coffee shop to life.",
+    quote: "Bloom helped us raise $25,000 in just 30 days. The platform&apos;s tools and support made all the difference in bringing our sustainable coffee shop to life.",
     rating: 5,
     campaign: "Eco-Friendly Coffee Shop",
     raised: "$25,000"
@@ -163,7 +163,7 @@ const TESTIMONIALS = [
     name: "Emma Rodriguez",
     role: "Owner, Artisan Bakery",
     image: "/testimonials/emma.jpg",
-    quote: "Bloom's platform gave us the perfect foundation to launch our bakery. The community support was overwhelming and helped us open our doors ahead of schedule.",
+    quote: "Bloom&apos;s platform gave us the perfect foundation to launch our bakery. The community support was overwhelming and helped us open our doors ahead of schedule.",
     rating: 5,
     campaign: "Local Artisan Bakery",
     raised: "$15,000"
@@ -201,7 +201,7 @@ const BENEFITS = [
   {
     icon: Award,
     title: "Expert Support",
-    description: "Get guidance from our team of crowdfunding experts. We're here to help you succeed."
+    description: "Get guidance from our team of crowdfunding experts. We&apos;re here to help you succeed."
   },
   {
     icon: Users,

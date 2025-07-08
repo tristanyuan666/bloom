@@ -87,7 +87,7 @@ export default function SupportPage() {
       <section className="bg-white border-b border-gray-100 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-            We're Here to Help
+            We&apos;re Here to Help
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             Our support team is available 24/7 to help you with any questions or issues you might have.
