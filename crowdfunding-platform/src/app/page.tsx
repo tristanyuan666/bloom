@@ -9,7 +9,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowRight, PlusCircle, TrendingUp, Users } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ArrowRight, PlusCircle, TrendingUp, Users, Star, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import { getCampaigns, getCampaignStats, type Campaign } from "@/lib/database";
 
@@ -92,7 +94,7 @@ export default async function HomePage() {
                 );
 
                 return (
-                  <Card key={campaign.id} className="overflow-hidden">
+                  <Card key={campaign.id} className="overflow-hidden group hover:shadow-lg transition-all duration-300">
                     <div className="aspect-video relative">
                       <img
                         src={
@@ -100,16 +102,28 @@ export default async function HomePage() {
                           `https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80`
                         }
                         alt={campaign.title}
-                        className="object-cover w-full h-full"
+                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                        <p className="text-white font-medium">
+                      <div className="absolute top-3 left-3">
+                        <Badge variant="secondary" className="bg-white/90 text-foreground">
                           {fundingPercentage}% Funded
-                        </p>
+                        </Badge>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+                        <div className="flex items-center space-x-2">
+                          <Avatar className="h-8 w-8">
+                            <AvatarImage src={campaign.creator.avatar} alt={campaign.creator.name} />
+                            <AvatarFallback>{campaign.creator.name.charAt(0)}</AvatarFallback>
+                          </Avatar>
+                          <div className="text-white">
+                            <p className="text-sm font-medium">{campaign.creator.name}</p>
+                            <p className="text-xs opacity-90">Campaign Creator</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <CardHeader>
-                      <CardTitle className="line-clamp-2">
+                      <CardTitle className="line-clamp-2 text-lg">
                         {campaign.title}
                       </CardTitle>
                       <CardDescription className="line-clamp-2">
@@ -117,32 +131,44 @@ export default async function HomePage() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="space-y-2">
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div
-                            className="bg-primary h-2 rounded-full transition-all duration-300"
-                            style={{ width: `${fundingPercentage}%` }}
-                          ></div>
+                      <div className="space-y-4">
+                        <div className="space-y-2">
+                          <div className="w-full bg-muted rounded-full h-2">
+                            <div
+                              className="bg-primary h-2 rounded-full transition-all duration-300"
+                              style={{ width: `${fundingPercentage}%` }}
+                            ></div>
+                          </div>
+                          <div className="flex justify-between text-sm">
+                            <p>
+                              <span className="font-bold text-lg">
+                                ${campaign.current_funding.toLocaleString()}
+                              </span>{" "}
+                              raised
+                            </p>
+                            <p className="text-muted-foreground">
+                              Goal:{" "}
+                              <span className="font-bold">
+                                ${campaign.funding_goal.toLocaleString()}
+                              </span>
+                            </p>
+                          </div>
                         </div>
-                        <div className="flex justify-between text-sm">
-                          <p>
-                            <span className="font-bold">
-                              ${campaign.current_funding.toLocaleString()}
-                            </span>{" "}
-                            raised
-                          </p>
-                          <p>
-                            Goal:{" "}
-                            <span className="font-bold">
-                              ${campaign.funding_goal.toLocaleString()}
-                            </span>
-                          </p>
-                        </div>
-                        <div className="flex items-center text-sm text-muted-foreground">
-                          <Users className="mr-1 h-4 w-4" />
-                          <span>{campaign.backers_count} backers</span>
-                          <span className="mx-2">•</span>
-                          <span>{daysRemaining} days left</span>
+                        <div className="flex items-center justify-between text-sm text-muted-foreground">
+                          <div className="flex items-center space-x-4">
+                            <div className="flex items-center">
+                              <Users className="mr-1 h-4 w-4" />
+                              <span>{campaign.backers_count} backers</span>
+                            </div>
+                            <div className="flex items-center">
+                              <Clock className="mr-1 h-4 w-4" />
+                              <span>{daysRemaining} days left</span>
+                            </div>
+                          </div>
+                          <div className="flex items-center">
+                            <Star className="mr-1 h-4 w-4 text-yellow-500 fill-current" />
+                            <span className="font-medium">Featured</span>
+                          </div>
                         </div>
                       </div>
                     </CardContent>
