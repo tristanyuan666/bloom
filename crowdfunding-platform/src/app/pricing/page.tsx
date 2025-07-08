@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  CheckCircle, 
   DollarSign, 
   Shield, 
   Clock, 
@@ -11,10 +10,8 @@ import {
   TrendingUp,
   ArrowRight,
   Star,
-  Zap,
   Target
 } from "lucide-react";
-import Link from "next/link";
 
 const features = [
   {
@@ -342,9 +339,9 @@ export default function PricingPage() {
                       <p className="text-sm text-gray-600">{testimonial.business}</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-4 italic">
-                    "{testimonial.content}"
-                  </p>
+                                     <p className="text-gray-700 mb-4 italic">
+                     &quot;{testimonial.content}&quot;
+                   </p>
                   <div className="flex items-center justify-between">
                     <Badge variant="secondary" className="bg-[#56D08D]/10 text-[#56D08D]">
                       {testimonial.amount} raised
@@ -404,10 +401,10 @@ export default function PricingPage() {
                 <CardTitle className="text-lg">How do I receive my funds?</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Once your campaign ends successfully, we'll process your funds and send them to your bank 
-                  account within 2-5 business days.
-                </p>
+                                   <p className="text-gray-600">
+                     Once your campaign ends successfully, we&apos;ll process your funds and send them to your bank 
+                     account within 2-5 business days.
+                   </p>
               </CardContent>
             </Card>
             

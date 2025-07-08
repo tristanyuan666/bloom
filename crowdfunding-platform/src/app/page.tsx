@@ -6,22 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { 
   ArrowRight, 
   Play, 
   Sparkles, 
-  TrendingUp, 
   Users, 
-  Zap, 
-  Star, 
-  Flame, 
-  Crown, 
   Rocket, 
-  Heart, 
-  MessageCircle, 
   Share2, 
-  Eye, 
   DollarSign,
   CheckCircle,
   Shield,
@@ -423,9 +415,9 @@ export default function HomePage() {
                       <p className="text-sm text-gray-600">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="text-gray-600 italic">
-                    "{testimonial.content}"
-                  </p>
+                                     <p className="text-gray-600 italic">
+                     &quot;{testimonial.content}&quot;
+                   </p>
                 </CardContent>
               </Card>
             ))}

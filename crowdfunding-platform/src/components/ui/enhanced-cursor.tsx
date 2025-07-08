@@ -36,7 +36,7 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
         "(hover: hover) and (pointer: fine) and (min-width: 769px)",
       );
       return mediaQuery?.matches ?? false;
-    } catch (error) {
+    } catch {
       return false;
     }
   }, []);
@@ -78,8 +78,8 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
               } else {
                 setTimeout(checkReady, 100);
               }
-            } catch (error) {
-              console.debug("Hydration check error:", error);
+            } catch {
+              console.debug("Hydration check error");
               setTimeout(checkReady, 200);
             }
           };

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 interface TypewriterTextProps {
   isMounted: boolean;
@@ -11,12 +11,12 @@ export default function TypewriterText({ isMounted }: TypewriterTextProps) {
   const [displayText, setDisplayText] = useState("Fund Your Business Dreams");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const texts = [
+  const texts = useMemo(() => [
     "Fund Your Business Dreams",
     "Build Your Community",
     "Turn Ideas Into Reality",
     "Grow Your Business",
-  ];
+  ], []);
 
   useEffect(() => {
     if (

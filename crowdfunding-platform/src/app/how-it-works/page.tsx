@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Target, 
@@ -16,7 +16,7 @@ import {
   Shield,
   Clock
 } from "lucide-react";
-import Link from "next/link";
+
 
 const steps = [
   {
@@ -288,9 +288,9 @@ export default function HowItWorksPage() {
                       <p className="text-sm text-gray-600">{testimonial.business}</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-4 italic">
-                    "{testimonial.content}"
-                  </p>
+                                     <p className="text-gray-700 mb-4 italic">
+                     &quot;{testimonial.content}&quot;
+                   </p>
                   <div className="flex items-center justify-between">
                     <Badge variant="secondary" className="bg-[#56D08D]/10 text-[#56D08D]">
                       {testimonial.amount} raised
@@ -338,10 +338,10 @@ export default function HowItWorksPage() {
                 <CardTitle className="text-lg">What happens if I don't reach my funding goal?</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  If you don't reach your funding goal, no fees are charged and backers are not charged. 
-                  You can always try again with a revised campaign strategy.
-                </p>
+                                   <p className="text-gray-600">
+                     If you don&apos;t reach your funding goal, no fees are charged and backers are not charged. 
+                     You can always try again with a revised campaign strategy.
+                   </p>
               </CardContent>
             </Card>
             

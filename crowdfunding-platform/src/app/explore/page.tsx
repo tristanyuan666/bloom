@@ -9,13 +9,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { 
   Search, 
-  Filter, 
   Grid, 
   List, 
   MapPin, 
   Users, 
   Clock, 
-  DollarSign,
   ArrowRight,
   SlidersHorizontal
 } from "lucide-react";

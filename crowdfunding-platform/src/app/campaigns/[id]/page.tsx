@@ -12,15 +12,7 @@ import {
   Share2, 
   Heart, 
   MapPin, 
-  Users, 
-  Clock, 
-  DollarSign,
-  CheckCircle,
-  Star,
-  MessageCircle,
-  Calendar,
-  Target,
-  TrendingUp
+  CheckCircle
 } from "lucide-react";
 
 // Mock campaign data
@@ -115,7 +107,7 @@ const topBackers = [
   { name: "Green Living", amount: 1500, date: "2024-11-14" }
 ];
 
-export default function CampaignDetailPage({ params }: { params: { id: string } }) {
+export default function CampaignDetailPage() {
   const [selectedReward, setSelectedReward] = useState<number | null>(null);
   const [isLiked, setIsLiked] = useState(false);
 
@@ -253,9 +245,9 @@ export default function CampaignDetailPage({ params }: { params: { id: string } 
                     </p>
                     
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Story</h3>
-                    <p className="text-gray-700 leading-relaxed mb-6">
-                      As coffee enthusiasts and environmental advocates, we've always dreamed of creating a space where people can enjoy exceptional coffee while supporting sustainable practices. Our journey began when we realized that most coffee shops in San Francisco weren't prioritizing environmental responsibility.
-                    </p>
+                                         <p className="text-gray-700 leading-relaxed mb-6">
+                       As coffee enthusiasts and environmental advocates, we&apos;ve always dreamed of creating a space where people can enjoy exceptional coffee while supporting sustainable practices. Our journey began when we realized that most coffee shops in San Francisco weren&apos;t prioritizing environmental responsibility.
+                     </p>
                     
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">What We're Building</h3>
                     <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">

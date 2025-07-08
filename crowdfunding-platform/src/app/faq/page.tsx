@@ -110,7 +110,7 @@ export default function FAQPage() {
                 Frequently Asked Questions
               </h1>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Find answers to common questions about crowdfunding with Bloom. Can't find what you're looking for? Contact our support team.
+                Find answers to common questions about crowdfunding with Bloom. Can&apos;t find what you&apos;re looking for? Contact our support team.
               </p>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function FAQPage() {
                     Need Help?
                   </CardTitle>
                   <CardDescription>
-                    Can't find the answer you're looking for? Our support team is here to help.
+                    Can&apos;t find the answer you&apos;re looking for? Our support team is here to help.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">

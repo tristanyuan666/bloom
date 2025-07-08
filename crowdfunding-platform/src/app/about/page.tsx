@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { 
   Users, 
   Target, 
@@ -15,7 +14,6 @@ import {
   Phone
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 const stats = [
   { label: "Campaigns Funded", value: "2,500+", icon: Target },
@@ -112,11 +110,11 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About Bloom
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              We're on a mission to democratize access to capital for small businesses and entrepreneurs. 
-              Since 2020, we've helped thousands of dreamers turn their ideas into reality through 
-              community-powered funding.
-            </p>
+                          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                We&apos;re on a mission to democratize access to capital for small businesses and entrepreneurs. 
+                Since 2020, we&apos;ve helped thousands of dreamers turn their ideas into reality through 
+                community-powered funding.
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-[#56D08D] hover:bg-green-600">
                 Start Your Campaign
@@ -161,16 +159,16 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                We believe that great ideas shouldn't be limited by access to capital. Every entrepreneur 
-                deserves the opportunity to bring their vision to life, regardless of their background 
-                or connections.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Bloom connects passionate entrepreneurs with supportive communities who believe in their 
-                vision. Through our platform, we've helped create thousands of jobs, launched innovative 
-                products, and built stronger communities across the country.
-              </p>
+                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                 We believe that great ideas shouldn&apos;t be limited by access to capital. Every entrepreneur 
+                 deserves the opportunity to bring their vision to life, regardless of their background 
+                 or connections.
+               </p>
+                             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                 Bloom connects passionate entrepreneurs with supportive communities who believe in their 
+                 vision. Through our platform, we&apos;ve helped create thousands of jobs, launched innovative 
+                 products, and built stronger communities across the country.
+               </p>
               <div className="flex items-center space-x-4">
                 <Button className="bg-[#56D08D] hover:bg-green-600">
                   Learn More
@@ -309,9 +307,9 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Get in Touch
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-            </p>
+                         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+               Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
+             </p>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
