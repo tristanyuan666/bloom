@@ -9,7 +9,6 @@ interface CampaignDetailClientProps {
 
 export default function CampaignDetailClient({ campaignId }: CampaignDetailClientProps) {
   const [activeTab, setActiveTab] = useState<'about' | 'updates' | 'backers'>('about');
-  const [selectedReward, setSelectedReward] = useState<number | null>(null);
 
   // Mock campaign data
   const campaign = {
@@ -304,7 +303,6 @@ export default function CampaignDetailClient({ campaignId }: CampaignDetailClien
                     
                     <button 
                       className="w-full btn-primary"
-                      onClick={() => setSelectedReward(reward.id)}
                     >
                       Select Reward
                     </button>
