@@ -3,13 +3,14 @@
 import { useState } from 'react';
 import { MapPin, Users, Share2, Heart, MessageCircle, Calendar, DollarSign } from 'lucide-react';
 
-export default function CampaignDetailPage({ params }: { params: { id: string } }) {
+export default async function CampaignDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const [activeTab, setActiveTab] = useState<'about' | 'updates' | 'backers'>('about');
   const [selectedReward, setSelectedReward] = useState<number | null>(null);
 
   // Mock campaign data
   const campaign = {
-    id: params.id,
+    id: id,
     title: "Eco-Friendly Coffee Shop",
     description: "Opening a sustainable coffee shop that sources beans directly from local farmers and uses compostable packaging.",
     longDescription: "We&apos;re passionate about creating a coffee shop that not only serves amazing coffee but also makes a positive impact on our community and the environment.",
