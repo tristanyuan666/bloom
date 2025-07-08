@@ -404,7 +404,7 @@ export function useEnhancedCursor() {
           };
         }
       }
-    } catch (error) {
+    } catch {
       setIsEnabled(false);
     }
   }, [isMounted]);
