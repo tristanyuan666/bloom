@@ -170,7 +170,7 @@ export default function PricingPage() {
               Fee Calculator
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              See exactly how much you'll keep from your campaign
+              See exactly how much you&apos;ll keep from your campaign
             </p>
           </div>
           
@@ -216,7 +216,7 @@ export default function PricingPage() {
                       <span className="text-red-600">$2,650</span>
                     </div>
                     <div className="text-sm text-gray-600 mt-2">
-                      That's only 5.3% of your total raised amount!
+                      That&apos;s only 5.3% of your total raised amount!
                     </div>
                   </div>
                 </div>
@@ -231,7 +231,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What's Included
+              What&apos;s Included
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Everything you need to successfully fund your business
@@ -378,7 +378,7 @@ export default function PricingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Fees are only charged when your campaign is successfully funded. If you don't reach your goal, 
+                  Fees are only charged when your campaign is successfully funded. If you don&apos;t reach your goal, 
                   no fees are charged and backers are not charged.
                 </p>
               </CardContent>

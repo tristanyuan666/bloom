@@ -71,7 +71,7 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
             try {
               if (
                 document?.readyState === "complete" &&
-                (window as any)?.HYDRATION_COMPLETE &&
+                (window as Window & { HYDRATION_COMPLETE?: boolean })?.HYDRATION_COMPLETE &&
                 document?.body
               ) {
                 resolve();
@@ -119,8 +119,8 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
                     if (!isDesktopNow) {
                       setIsVisible(false);
                     }
-                  } catch (error) {
-                    console.debug("Media change error:", error);
+                  } catch {
+                    console.debug("Media change error");
                   }
                 };
 
@@ -128,18 +128,18 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
                 mediaQueryCleanup = () => {
                   try {
                     mediaQuery.removeEventListener("change", handleMediaChange);
-                  } catch (error) {
-                    console.debug("Media query cleanup error:", error);
+                  } catch {
+                    console.debug("Media query cleanup error");
                   }
                 };
-              } catch (error) {
+              } catch {
                 // Silently handle initialization errors
-                console.debug("Cursor initialization error:", error);
+                console.debug("Cursor initialization error");
               }
             });
           }
-        } catch (error) {
-          console.debug("Cursor hydration wait error:", error);
+        } catch {
+          console.debug("Cursor hydration wait error");
         }
       }, 1500); // Reduced wait time
 
@@ -230,9 +230,9 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
           target.hasAttribute("data-interactive") ||
           window.getComputedStyle(target).cursor === "pointer";
 
-        setIsHovering(isInteractive);
-      } catch (error) {
-        // Silently handle mouse over errors
+        setIsHovering(Boolean(isInteractive));
+      } catch {
+        console.debug("Interactive check error");
       }
     };
 

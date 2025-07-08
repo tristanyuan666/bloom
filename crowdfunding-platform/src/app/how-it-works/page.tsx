@@ -351,7 +351,7 @@ export default function HowItWorksPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Once your campaign ends successfully, you'll receive your funds within 2-5 business days 
+                  Once your campaign ends successfully, you&apos;ll receive your funds within 2-5 business days 
                   after the campaign period ends.
                 </p>
               </CardContent>
