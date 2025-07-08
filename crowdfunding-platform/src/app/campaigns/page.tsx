@@ -542,8 +542,31 @@ export default function CampaignsPage() {
   );
 }
 
-// Campaign Card Component (Grid View)
-function CampaignCard({ campaign }: { campaign: any }) {
+interface Campaign {
+  id: number;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  category: string;
+  subcategory: string;
+  goal: number;
+  raised: number;
+  daysLeft: number;
+  backers: number;
+  location: string;
+  creator: {
+    name: string;
+    avatar: string;
+    verified: boolean;
+  };
+  tags: string[];
+  featured: boolean;
+  progress: number;
+  currency: string;
+}
+
+function CampaignCard({ campaign }: { campaign: Campaign }) {
   return (
     <Link href={`/campaigns/${campaign.id}`} className="group">
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 h-full">
@@ -651,8 +674,7 @@ function CampaignCard({ campaign }: { campaign: any }) {
   );
 }
 
-// Campaign Card Component (List View)
-function CampaignCardList({ campaign }: { campaign: any }) {
+function CampaignCardList({ campaign }: { campaign: Campaign }) {
   return (
     <Link href={`/campaigns/${campaign.id}`} className="group">
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300">

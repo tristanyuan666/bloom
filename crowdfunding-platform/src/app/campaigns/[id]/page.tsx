@@ -18,7 +18,7 @@ export default function CampaignDetailPage({ params }: { params: { id: string } 
     goal: 25000,
     raised: 18750,
     daysLeft: 12,
-    backers: 234,
+    backersCount: 234,
     location: "Portland, OR",
     creator: {
       name: "Sarah Johnson",
@@ -133,7 +133,7 @@ export default function CampaignDetailPage({ params }: { params: { id: string } 
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <div className="text-2xl font-bold text-gray-900">{campaign.backers}</div>
+                      <div className="text-2xl font-bold text-gray-900">{campaign.backersCount}</div>
                       <div className="text-sm text-gray-600">backers</div>
                     </div>
                     <div>
@@ -187,7 +187,7 @@ export default function CampaignDetailPage({ params }: { params: { id: string } 
                   ].map((tab) => (
                     <button
                       key={tab.id}
-                      onClick={() => setActiveTab(tab.id as any)}
+                      onClick={() => setActiveTab(tab.id as 'about' | 'updates' | 'backers')}
                       className={`flex items-center space-x-2 py-4 px-1 border-b-2 font-medium text-sm ${
                         activeTab === tab.id
                           ? 'border-blue-500 text-blue-600'

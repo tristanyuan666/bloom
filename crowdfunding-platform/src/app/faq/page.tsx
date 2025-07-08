@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, ChevronDown, ChevronRight, Users, DollarSign, Gift, Shield, HelpCircle } from 'lucide-react';
+import { Search, ChevronDown, ChevronRight, DollarSign, Gift, Shield, HelpCircle } from 'lucide-react';
 
 const FAQ_CATEGORIES = [
   {

@@ -119,7 +119,7 @@ export default function ProfilePage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       // Handle successful save
       console.log('Profile updated:', formData);
-    } catch (error) {
+    } catch {
       setErrors({ general: 'Failed to update profile' });
     } finally {
       setIsLoading(false);
@@ -135,7 +135,7 @@ export default function ProfilePage() {
       // Handle successful password change
       setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' });
       console.log('Password updated');
-    } catch (error) {
+    } catch {
       setErrors({ general: 'Failed to update password' });
     } finally {
       setIsLoading(false);

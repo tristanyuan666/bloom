@@ -10,19 +10,17 @@ import {
   Heart, 
   Settings, 
   Plus, 
-  Eye, 
-  Edit, 
+  BarChart3,
+  MapPin,
+  Eye,
+  Edit,
   MoreVertical,
   Calendar,
-  MapPin,
-  Star,
   CheckCircle,
   Clock,
   ArrowRight,
-  BarChart3,
   CreditCard,
-  Gift,
-  Bell
+  Gift
 } from 'lucide-react';
 
 const MOCK_USER = {
@@ -99,8 +97,7 @@ const NAV_ITEMS = [
   { id: 'overview', label: 'Overview', icon: Home },
   { id: 'campaigns', label: 'My Campaigns', icon: TrendingUp },
   { id: 'pledges', label: 'My Pledges', icon: Heart },
-  { id: 'rewards', label: 'Claim Rewards', icon: Gift },
-  { id: 'settings', label: 'Settings', icon: Settings }
+  { id: 'rewards', label: 'Claim Rewards', icon: BarChart3 }
 ];
 
 export default function DashboardPage() {
@@ -117,7 +114,7 @@ export default function DashboardPage() {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-900">Welcome back, {MOCK_USER.name}!</h2>
-            <p className="text-gray-600">Here's how your campaigns are performing today.</p>
+            <p className="text-gray-600">Here&apos;s how your campaigns are performing today.</p>
           </div>
         </div>
       </div>

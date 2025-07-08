@@ -10,11 +10,7 @@ import {
   CheckCircle,
   DollarSign,
   Calendar,
-  MapPin,
-  Users,
-  Gift,
-  Eye,
-  Edit
+  MapPin
 } from 'lucide-react';
 
 const CAMPAIGN_CATEGORIES = [
@@ -63,7 +59,7 @@ export default function CreateCampaignPage() {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: string, value: unknown) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     // Clear error when user starts typing
     if (errors[field]) {
@@ -71,7 +67,7 @@ export default function CreateCampaignPage() {
     }
   };
 
-  const handleRewardChange = (index: number, field: string, value: any) => {
+  const handleRewardChange = (index: number, field: string, value: unknown) => {
     const newRewards = [...formData.rewards];
     newRewards[index] = { ...newRewards[index], [field]: value };
     setFormData(prev => ({ ...prev, rewards: newRewards }));

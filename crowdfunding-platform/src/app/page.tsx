@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, X, Eye, BarChart3, Users, DollarSign, Calendar, TrendingUp, Heart, Settings, Plus, PenTool, Share2, CreditCard, Rocket, ChevronLeft, ChevronRight, Clock, MapPin, Star, Quote, ChevronDown, Shield, Globe, Zap, Target, Award, HelpCircle } from 'lucide-react';
+import { ArrowRight, X, Eye, BarChart3, Users, DollarSign, Calendar, TrendingUp, Heart, Settings, Plus, PenTool, Share2, CreditCard, Rocket, ChevronLeft, ChevronRight, Clock, MapPin, Star, Quote, ChevronDown, Shield, Globe, Zap, Target, Award } from 'lucide-react';
 
 const TRUST_BADGES = [
   { name: 'Forbes', logo: '/badges/forbes.svg' },
