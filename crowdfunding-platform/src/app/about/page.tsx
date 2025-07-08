@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Heart, Users, DollarSign, TrendingUp, Shield, Globe, Zap, Target, Award, ArrowRight } from 'lucide-react';
+import { Heart, Shield, Globe, Zap, ArrowRight } from 'lucide-react';
 
 const TEAM_MEMBERS = [
   {
@@ -67,7 +67,6 @@ const MILESTONES = [
 ];
 
 export default function AboutPage() {
-  const [activeMilestone, setActiveMilestone] = useState(0);
 
   return (
     <div className="min-h-screen bg-gray-50">
