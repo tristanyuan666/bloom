@@ -171,7 +171,7 @@ export default function PricingPage() {
               Understanding Our Fees
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We believe in complete transparency. Here's exactly what you'll pay and when.
+              We believe in complete transparency. Here&apos;s exactly what you&apos;ll pay and when.
             </p>
           </div>
 
@@ -228,7 +228,7 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What's Included
+              What&apos;s Included
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Every plan includes these essential features to help you succeed
@@ -274,7 +274,7 @@ export default function PricingPage() {
                 When do I pay the platform fee?
               </h3>
               <p className="text-gray-600">
-                Platform fees are only charged on successfully funded campaigns. If your campaign doesn't reach its goal, you pay nothing.
+                Platform fees are only charged on successfully funded campaigns. If your campaign doesn&apos;t reach its goal, you pay nothing.
               </p>
             </div>
 
@@ -283,7 +283,7 @@ export default function PricingPage() {
                 Are there any hidden fees?
               </h3>
               <p className="text-gray-600">
-                No hidden fees. Our pricing is completely transparent. You'll see exactly what you'll pay before you launch your campaign.
+                No hidden fees. Our pricing is completely transparent. You&apos;ll see exactly what you&apos;ll pay before you launch your campaign.
               </p>
             </div>
 
