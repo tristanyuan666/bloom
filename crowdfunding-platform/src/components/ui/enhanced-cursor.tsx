@@ -91,53 +91,51 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
         try {
           await waitForHydration();
 
-          if (window.requestAnimationFrame) {
-            rafId = requestAnimationFrame(() => {
-              try {
-                // Check if desktop and set initial state
-                const isDesktopDevice = checkDesktop();
-                setIsDesktop(isDesktopDevice);
+          rafId = requestAnimationFrame(() => {
+            try {
+              // Check if desktop and set initial state
+              const isDesktopDevice = checkDesktop();
+              setIsDesktop(isDesktopDevice);
 
-                if (isDesktopDevice) {
-                  // Set initial cursor position off-screen
-                  setPosition({
-                    x: -100,
-                    y: -100,
-                  });
-                  setIsVisible(false);
-                }
-
-                // Set up media query listener
-                const mediaQuery = window.matchMedia(
-                  "(hover: hover) and (pointer: fine) and (min-width: 769px)",
-                );
-
-                const handleMediaChange = () => {
-                  try {
-                    const isDesktopNow = checkDesktop();
-                    setIsDesktop(isDesktopNow);
-                    if (!isDesktopNow) {
-                      setIsVisible(false);
-                    }
-                  } catch {
-                    console.debug("Media change error");
-                  }
-                };
-
-                mediaQuery.addEventListener("change", handleMediaChange);
-                mediaQueryCleanup = () => {
-                  try {
-                    mediaQuery.removeEventListener("change", handleMediaChange);
-                  } catch {
-                    console.debug("Media query cleanup error");
-                  }
-                };
-              } catch {
-                // Silently handle initialization errors
-                console.debug("Cursor initialization error");
+              if (isDesktopDevice) {
+                // Set initial cursor position off-screen
+                setPosition({
+                  x: -100,
+                  y: -100,
+                });
+                setIsVisible(false);
               }
-            });
-          }
+
+              // Set up media query listener
+              const mediaQuery = window.matchMedia(
+                "(hover: hover) and (pointer: fine) and (min-width: 769px)",
+              );
+
+              const handleMediaChange = () => {
+                try {
+                  const isDesktopNow = checkDesktop();
+                  setIsDesktop(isDesktopNow);
+                  if (!isDesktopNow) {
+                    setIsVisible(false);
+                  }
+                } catch {
+                  console.debug("Media change error");
+                }
+              };
+
+              mediaQuery.addEventListener("change", handleMediaChange);
+              mediaQueryCleanup = () => {
+                try {
+                  mediaQuery.removeEventListener("change", handleMediaChange);
+                } catch {
+                  console.debug("Media query cleanup error");
+                }
+              };
+            } catch {
+              // Silently handle initialization errors
+              console.debug("Cursor initialization error");
+            }
+          });
         } catch {
           console.debug("Cursor hydration wait error");
         }
@@ -153,7 +151,7 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
     return () => {
       mountedRef.current = false;
       if (cleanup) cleanup();
-      if (rafId && window?.cancelAnimationFrame) {
+      if (rafId) {
         cancelAnimationFrame(rafId);
       }
       if (mediaQueryCleanup) {
@@ -185,7 +183,7 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
     }
 
     const updateCursorPosition = (e: MouseEvent) => {
-      if (!isMoving && window.requestAnimationFrame) {
+      if (!isMoving) {
         isMoving = true;
         animationFrameId = requestAnimationFrame(() => {
           setPosition({ x: e.clientX, y: e.clientY });
@@ -286,7 +284,7 @@ export default function EnhancedCursor({ className }: EnhancedCursorProps) {
           document.documentElement.classList.remove("cursor-hidden");
         }
 
-        if (animationFrameId && window.cancelAnimationFrame) {
+        if (animationFrameId) {
           cancelAnimationFrame(animationFrameId);
         }
         if (typeof document !== "undefined") {
